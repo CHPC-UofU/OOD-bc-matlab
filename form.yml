@@ -1,5 +1,5 @@
 ---
-title: "MATLAB on scrubpeak"
+title: "MATLAB on Scrubpeak"
 cluster: "scrubpeak"
 description: |
   This app will launch a MATLAB GUI on one or more Lonepeak node. You will be
