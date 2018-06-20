@@ -5,21 +5,9 @@ description: |
   This app will launch a MATLAB GUI on one or more Lonepeak node. You will be
   able to interact with MATLAB through a VNC session.
 attributes:
-form:
-  - version
-  - bc_account
-  - bc_num_hours
-  - bc_num_slots
-  - node_type
-  - bc_vnc_resolution
-  - bc_email_on_started
-attributes:
   bc_num_slots: "1"
   bc_vnc_resolution:
     required: true
-  bc_account:
-    label: "Project"
-    help: "You can leave this blank if **not** in multiple projects."
   version:
     widget: select
     label: "MATLAB version"
@@ -29,6 +17,13 @@ attributes:
       - [ "R2017a", "matlab/R2017a" ]
       - [ "R2016b", "matlab/R2016b" ]
       - [ "R2015b", "matlab/R2015b" ]
+  bc_account:
+    label: "Account"
+    help: "If left blank default account will be used"
+  bc_queue:
+    label: "Partition"
+    value: "scrubpeak"
+    help: "If left blank default partition will be used"
   node_type:
     widget: select
     label: "Node type"
@@ -43,3 +38,12 @@ attributes:
       - ["8 core node", "c8"]
       - ["12 core node", "c12"]
       - ["20 core node", "c20"]
+form:
+  - version
+  - bc_num_slots
+  - bc_num_hours
+  - bc_account
+  - bc_queue
+  - node_type
+  - bc_vnc_resolution
+  - bc_email_on_started
